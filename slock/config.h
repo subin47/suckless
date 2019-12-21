@@ -12,7 +12,7 @@ static const char *colorname[NUMCOLS] = {
 static const int failonclear = 1;
 
 /* default message */
-static const char * message = "`cowsay fortune`";
+static const char * message = "$cowsay $(fortune)";
 
 /* text color */
 static const char * text_color = "#ffffff";
