@@ -66,6 +66,8 @@ static const struct arg args[] = {
 
 	{ cpu_perc, "[CPU %s%%]", NULL    },
 	{ ram_perc, "[RAM %s%%]", NULL    },
+	{ netspeed_rx, "[NET D:%s|", "wlp1s0" },
+	{ netspeed_tx, "U:%s]", "wlp1s0" },
 	{ wifi_essid, "[WIFI %s(", "wlp1s0"    },
 	{ wifi_perc, "%s%%)]", "wlp1s0"    },
 	{ battery_perc, "[BAT %2s%%(", "BAT0"    },
