@@ -64,19 +64,19 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
 
-	{ cpu_perc, "[CPU %s%%]", NULL    },
-	{ ram_perc, "[RAM %s%%]", NULL    },
-	{ netspeed_rx, "[NET D:%s|", "wlp1s0" },
-	{ netspeed_tx, "U:%s]", "wlp1s0" },
-	{ wifi_essid, "[WIFI %s(", "wlp1s0"    },
-	{ wifi_perc, "%s%%)]", "wlp1s0"    },
-	{ battery_perc, "[BAT %2s%%(", "BAT0"    },
-	{ battery_state, "%s)]", "BAT0"    },
+	{ netspeed_rx, "%s", "wlp1s0" },
+	{ netspeed_tx, "/%s | ", "wlp1s0" },
+	{ cpu_perc, "c=%s%% | ", NULL    },
+	{ ram_perc, "r=%s%% | ", NULL    },
+	{ wifi_essid, "w=%s(", "wlp1s0"    },
+	{ wifi_perc, "%s%%) | ", "wlp1s0"    },
+	{ battery_perc, "b=%2s%%", "BAT0"    },
+	{ battery_state, "(%s) | ", "BAT0"    },
 /*	{ disk_perc, "[HD %s%%]", "/"    }, */
-	{ run_command, "[BR %s]", "echo $(brightnessctl -m i | awk -F, '{print $4}')" },
-	{ run_command, "[VOL %s%%]", "/bin/sh -c \"amixer get Master | tail -n1 | grep -Po '\\[\\K[^%]*' | head -n1\"" },
+	{ run_command, "s=%s | ", "echo $(brightnessctl -m i | awk -F, '{print $4}')" },
+	{ run_command, "v=%s%% | ", "/bin/sh -c \"amixer get Master | tail -n1 | grep -Po '\\[\\K[^%]*' | head -n1\"" },
 	/*{ vol_perc, "[VOL %s%%]", "/dev/snd" },*/
 	/*{ cpu_perc, "[CPU %3s%%] ", NULL    },
 	{ ram_perc, "[RAM %2s%%] ", NULL    },*/
-	{ datetime, " %s",           "%F %T" },
+	{ datetime, "%s",           "%F %T" },
 };
