@@ -73,7 +73,7 @@ static const struct arg args[] = {
 	{ battery_perc, "b=%2s%%", "BAT0"    },
 	{ battery_state, "(%s) | ", "BAT0"    },
 /*	{ disk_perc, "[HD %s%%]", "/"    }, */
-	{ run_command, "s=%s | ", "echo $(brightnessctl -m i | awk -F, '{print $4}')" },
+	{ run_command, "*=%s | ", "echo $(brightnessctl -m i | awk -F, '{print $4}')" },
 	{ run_command, "v=%s%% | ", "/bin/sh -c \"amixer get Master | tail -n1 | grep -Po '\\[\\K[^%]*' | head -n1\"" },
 	/*{ vol_perc, "[VOL %s%%]", "/dev/snd" },*/
 	/*{ cpu_perc, "[CPU %3s%%] ", NULL    },
